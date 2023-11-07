@@ -1,6 +1,13 @@
 from rest_framework import viewsets
-from home.models import FFFsefe, FFFsefe, FFFsefe
-from .serializers import FFFsefeSerializer, FFFsefeSerializer, FFFsefeSerializer
+from home.models import FFFsefe, Kungshu, FFFsefe, Kungshu, FFFsefe, Kungshu
+from .serializers import (
+    FFFsefeSerializer,
+    KungshuSerializer,
+    FFFsefeSerializer,
+    KungshuSerializer,
+    FFFsefeSerializer,
+    KungshuSerializer,
+)
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -41,3 +48,12 @@ class FFFsefeViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = FFFsefe.objects.all()
+
+
+class KungshuViewSet(viewsets.ModelViewSet):
+    serializer_class = KungshuSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = Kungshu.objects.all()

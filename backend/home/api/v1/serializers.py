@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import FFFsefe, FFFsefe
+from home.models import FFFsefe, Kungshu, FFFsefe, Kungshu
 from django.http import HttpRequest
 from django.utils.translation import gettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -79,4 +79,10 @@ class PasswordSerializer(PasswordResetSerializer):
 class FFFsefeSerializer(serializers.ModelSerializer):
     class Meta:
         model = FFFsefe
+        fields = "__all__"
+
+
+class KungshuSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Kungshu
         fields = "__all__"
