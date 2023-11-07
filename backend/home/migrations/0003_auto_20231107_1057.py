@@ -5,26 +5,46 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('home', '0002_fffsefe'),
+        ("home", "0002_fffsefe"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Kungshu',
+            name="Kungshu",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('asdw', models.BigIntegerField()),
-                ('werf', models.CharField(max_length=99)),
-                ('bft', models.PositiveIntegerField()),
-                ('dfntj', models.BinaryField()),
-                ('rel_fffsefe_n_n', models.ManyToManyField(blank=True, related_name='kungshu_rel_fffsefe_n_n', to='home.FFFsefe')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("asdw", models.BigIntegerField()),
+                ("werf", models.CharField(max_length=99)),
+                ("bft", models.PositiveIntegerField()),
+                ("dfntj", models.BinaryField()),
+                (
+                    "rel_fffsefe_n_n",
+                    models.ManyToManyField(
+                        blank=True,
+                        related_name="kungshu_rel_fffsefe_n_n",
+                        to="home.FFFsefe",
+                    ),
+                ),
             ],
         ),
         migrations.AddField(
-            model_name='fffsefe',
-            name='rel_kungshu_1_n',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='fffsefe_rel_kungshu_1_n', to='home.kungshu'),
+            model_name="fffsefe",
+            name="rel_kungshu_1_n",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="fffsefe_rel_kungshu_1_n",
+                to="home.kungshu",
+            ),
         ),
     ]

@@ -7,8 +7,8 @@ class FFFsefe(models.Model):
     dfde = models.BigIntegerField()
     rel_kungshu_1_n = models.ForeignKey(
         "home.Kungshu",
-        blank=True,
         null=True,
+        blank=True,
         on_delete=models.CASCADE,
         related_name="fffsefe_rel_kungshu_1_n",
     )
