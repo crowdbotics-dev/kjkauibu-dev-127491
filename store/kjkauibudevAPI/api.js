@@ -26,6 +26,24 @@ function api_v1_fffsefe_partial_update(payload) {
 function api_v1_fffsefe_destroy(payload) {
   return kjkauibudevAPI.delete(`/api/v1/fffsefe/${payload.id}/`)
 }
+function api_v1_kungshu_list(payload) {
+  return kjkauibudevAPI.get(`/api/v1/kungshu/`)
+}
+function api_v1_kungshu_create(payload) {
+  return kjkauibudevAPI.post(`/api/v1/kungshu/`, payload)
+}
+function api_v1_kungshu_retrieve(payload) {
+  return kjkauibudevAPI.get(`/api/v1/kungshu/${payload.id}/`)
+}
+function api_v1_kungshu_update(payload) {
+  return kjkauibudevAPI.put(`/api/v1/kungshu/${payload.id}/`, payload)
+}
+function api_v1_kungshu_partial_update(payload) {
+  return kjkauibudevAPI.patch(`/api/v1/kungshu/${payload.id}/`, payload)
+}
+function api_v1_kungshu_destroy(payload) {
+  return kjkauibudevAPI.delete(`/api/v1/kungshu/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return kjkauibudevAPI.post(`/api/v1/login/`, payload)
 }
@@ -73,6 +91,12 @@ export const apiService = {
   api_v1_fffsefe_update,
   api_v1_fffsefe_partial_update,
   api_v1_fffsefe_destroy,
+  api_v1_kungshu_list,
+  api_v1_kungshu_create,
+  api_v1_kungshu_retrieve,
+  api_v1_kungshu_update,
+  api_v1_kungshu_partial_update,
+  api_v1_kungshu_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
