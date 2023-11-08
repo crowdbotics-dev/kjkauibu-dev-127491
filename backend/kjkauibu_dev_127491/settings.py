@@ -70,10 +70,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
 ]
-LOCAL_APPS = [
-    "home",
-    "users.apps.UsersConfig",
-]
+LOCAL_APPS = ["home", "users.apps.UsersConfig", "connectors"]
 THIRD_PARTY_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
@@ -294,3 +291,5 @@ if GS_BUCKET_NAME:
     GS_DEFAULT_ACL = "publicRead"
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+CONNECTOR_PROMTDETOX_PASSWORD = env.str("CONNECTOR_PROMTDETOX_PASSWORD", "")
+CONNECTOR_PROMTDETOX_USERNAME = env.str("CONNECTOR_PROMTDETOX_USERNAME", "")
